@@ -184,6 +184,9 @@
   @media (max-width: 720px) { .cols { grid-template-columns: 1fr; gap: 8px; } }
 
   /* Coffee */
+  .coffee .qr { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; margin: 0 0 0 22px; color: var(--muted); font-size: 0.85rem; text-decoration: none; vertical-align: middle; }
+  .coffee .qr img { width: 120px; height: 120px; border-radius: 8px; background: #fff; padding: 4px; }
+  .nudge { margin-top: 22px; padding: 14px 18px; border-radius: 10px; background: var(--raised); color: var(--muted); }
   .coffee { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
   .coffee img { height: 56px; width: auto; display: block; }
 
@@ -299,16 +302,18 @@ xattr -dr com.apple.quarantine /Applications/WatchlistBox.app</code></pre>
         </ul>
       </div>
       <p>Needs: on Windows, a CPU with virtualisation extensions and a few gigabytes of free disk space; on a Mac, an Apple Silicon chip and macOS 26 or later (this build is tied to the macOS it was built on). Trouble? The <a href="https://github.com/Tokeloshe/WatchlistBoxApp#troubleshooting">troubleshooting notes</a> cover the usual cases, and an <a href="https://github.com/Tokeloshe/WatchlistBoxApp/issues">issue</a> with the diagnostics zip from the error card reaches the developer.</p>
+      <p class="nudge">Playing your first film? If WatchlistBox has earned the spot under your television, <a href="https://buymeacoffee.com/Tokeloshe">buy me a coffee</a> ($5). It is what keeps it free.</p>
     </div>
   </section>
 
   <section class="plain" id="support">
     <div class="wrap">
       <h2>Support the project</h2>
-      <p>WatchlistBox is free, built by one developer in the evenings. If it has given your television a better box, a coffee keeps the lights on.</p>
+      <p>WatchlistBox is free, and it stays free. One person makes it, in the evenings. If it has earned the spot under your television, a coffee ($5) says so, and every coffee goes straight back into the project: Apple's developer signing ($99 a year), so that the Mac install becomes a plain double-click with no Terminal and no "Open Anyway"; and the evenings that keep it working when Watchlist Pro changes and turn your bug reports into fixes.</p>
       <div class="coffee">
         <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee"></a>
-        <p style="margin:0">Other ways, including XRP and the ones that cost nothing, are in <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/DONATE.md">DONATE.md</a>.</p>
+        <a class="qr" href="https://buymeacoffee.com/Tokeloshe"><img src="assets/bmc-qr-480.png" alt="Buy Me a Coffee QR code" width="120" height="120"><span>From the sofa: scan with your phone</span></a>
+        <p style="margin:0">One tap, any card, no account needed. Other ways, including XRP and the ones that cost nothing, are in <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/DONATE.md">DONATE.md</a>.</p>
       </div>
     </div>
   </section>

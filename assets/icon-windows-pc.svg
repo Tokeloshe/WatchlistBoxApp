@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WatchlistBox brand asset. Copyright (c) 2026 James Honiball. A desktop computer, drawn in the brand amber. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <title>A desktop computer</title>
+  <g fill="none" stroke="#F5970E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="5" y="9" width="38" height="25" rx="3"/>
+    <path d="M18 41h12"/>
+    <path d="M24 34v7"/>
+    <path d="M5 28h38"/>
+  </g>
+</svg>

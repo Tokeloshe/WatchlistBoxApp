@@ -1,41 +1,62 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/watchlistbox-wordmark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/watchlistbox-wordmark-light.svg">
-    <img src="assets/watchlistbox-wordmark-light.svg" alt="WatchlistBox" width="520">
-  </picture>
+  <a href="#download"><img src="assets/hero.svg" alt="WatchlistBox" width="880"></a>
 </p>
 
 <p align="center"><em>A Honiball brothers app</em></p>
+
+<p align="center">
+  <b>Your computer, as the box under the television.</b><br>
+  WatchlistBox turns a Windows PC or an Apple Silicon Mac into a set-top box for Watchlist Pro:<br>
+  it boots straight into the app and plays your films full screen, driven by a keyboard,<br>
+  a game controller or a mouse. Free.
+</p>
 
 <p align="center">
   <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/latest"><img src="https://img.shields.io/github/v/release/Tokeloshe/WatchlistBoxApp?label=release&color=1F6FEB" alt="Latest release"></a>
   <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Setup-x64.exe?label=Windows&color=F5970E" alt="Windows downloads"></a>
   <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg?label=Mac&color=F5970E" alt="Mac downloads"></a>
   <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/total?label=all%20downloads&color=F5970E" alt="All downloads"></a>
-</p>
-
-<p align="center">
-  WatchlistBox turns a Windows PC or an Apple Silicon Mac into a set-top box for Watchlist Pro.<br>
-  One download, and the computer boots straight into the app and plays your films full screen,<br>
-  driven by a keyboard, a game controller or a mouse. Free.
+  <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-%245-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
 </p>
 
 ## Download
 
-Pick your computer. The TV system comes with it, and the Watchlist Pro app itself downloads on
-the first start, so there is nothing else to fetch.
+The TV system comes with it, and the Watchlist Pro app downloads itself on the first start, so
+there is nothing else to fetch. Pick your computer.
 
-### Windows (64-bit)
+<table>
+<tr>
+<td align="center" width="50%" valign="top">
+<br>
+<img src="assets/icon-windows-pc.svg" width="44" alt="">
+<h3>Windows</h3>
+<sub>Windows 10 (version 1809) or Windows 11, 64-bit</sub>
+<br><br>
+<a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows-F5970E?style=for-the-badge" alt="Download for Windows"></a>
+<br>
+<sub>WatchlistBox-Setup-x64.exe · 1.07 GB, TV system included</sub>
+<br><br>
+</td>
+<td align="center" width="50%" valign="top">
+<br>
+<img src="assets/icon-mac-laptop.svg" width="44" alt="">
+<h3>Mac</h3>
+<sub>Apple Silicon (M1 or later), macOS 26 or later</sub>
+<br><br>
+<a href="#macos-apple-silicon"><img src="https://img.shields.io/badge/Install%20on%20Mac-F5970E?style=for-the-badge" alt="Install on Mac"></a>
+<br>
+<sub>one line in Terminal · 55 MB app + 929 MB TV system</sub>
+<br><br>
+</td>
+</tr>
+</table>
 
-<p>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows-WatchlistBox--Setup--x64.exe-F5970E?style=for-the-badge" alt="Download WatchlistBox-Setup-x64.exe"></a>
-</p>
+### Windows
 
 | | |
 | --- | --- |
-| **Size** | 1.07 GB, the TV system included |
-| **Needs** | Windows 10 version 1809 or later, or Windows 11; a CPU with virtualisation (Intel VT-x or AMD-V, turned on in the PC's firmware); a few gigabytes of free disk space |
+| **Download** | [WatchlistBox-Setup-x64.exe](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe), 1.07 GB |
+| **Needs** | Windows 10 version 1809 or later, or Windows 11, 64-bit; a CPU with virtualisation (Intel VT-x or AMD-V, turned on in the PC's firmware); a few gigabytes of free disk space |
 
 1. Open the downloaded file and press **Install**. It installs for your user account, needs
    no administrator password and no restart, and then offers to start WatchlistBox.
@@ -53,17 +74,17 @@ the first start, so there is nothing else to fetch.
 
 | | |
 | --- | --- |
-| **Size** | 55 MB app, plus the 929 MB TV system; the installer fetches both |
+| **Install** | one line in Terminal; it fetches the 55 MB app and the 929 MB TV system |
 | **Needs** | An Apple Silicon Mac (M1 or later) with macOS 26 or later |
 
-Open **Terminal** (press <kbd>⌘</kbd><kbd>Space</kbd>, type `Terminal`, press Return), paste
-this one line and press Return:
+Open **Terminal** (press <kbd>⌘</kbd> <kbd>Space</kbd>, type `Terminal`, press Return), paste
+this line and press Return:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/main/install.sh | bash
 ```
 
-It downloads the app and the TV system, checks both, puts the app in Applications, and starts
+It downloads the app and the TV system, checks both, puts the app in Applications and starts
 it. WatchlistBox then downloads the current Watchlist Pro app and opens it. Sign in with your
 own Watchlist Pro account and watch. From then on, open WatchlistBox from Applications like
 any app. Running the line again later updates it and keeps your settings.
@@ -106,6 +127,14 @@ tar -xf ~/Downloads/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2
 xattr -dr com.apple.quarantine /Applications/WatchlistBox.app
 ```
 </details>
+
+<p align="center">
+  <br>
+  <img src="assets/icon-coffee.svg" width="28" alt=""><br>
+  <sub>Playing your first film? If WatchlistBox has earned the spot under your television,<br>
+  <a href="https://buymeacoffee.com/Tokeloshe"><b>buy me a coffee</b></a> ($5). It is what keeps it free.</sub>
+  <br><br>
+</p>
 
 ### Downloads so far
 
@@ -164,16 +193,35 @@ It is not a general-purpose Android emulator, and it runs one app only.
 
 ## Support the project
 
-WatchlistBox is free and made by one person. If it has earned a place under your television,
-a coffee is a fine way to say so.
+WatchlistBox is free, and it stays free. One person makes it, in the evenings. If it has
+earned the spot under your television, a coffee ($5) says so, and every coffee goes straight
+back into the project:
 
-<p align="center">
-  <a href="https://buymeacoffee.com/Tokeloshe">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60">
-  </a>
-</p>
+- **Apple's developer signing** ($99 a year), so that the Mac install becomes a plain
+  double-click, with no Terminal and no "Open Anyway".
+- **The evenings** that keep it working when Watchlist Pro changes, and that turn your bug
+  reports into fixes.
 
-Other ways, including XRP and the ones that cost nothing, are in [DONATE.md](DONATE.md).
+<table align="center">
+<tr>
+<td align="center" valign="middle" width="56%">
+<br>
+<a href="https://buymeacoffee.com/Tokeloshe"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60"></a>
+<br><br>
+<sub>One tap, any card, no account needed.</sub>
+<br><br>
+</td>
+<td align="center" valign="middle" width="44%">
+<br>
+<a href="https://buymeacoffee.com/Tokeloshe"><img src="assets/bmc-qr-480.png" alt="Buy Me a Coffee QR code" width="140"></a>
+<br>
+<sub>From the sofa: scan with your phone</sub>
+<br><br>
+</td>
+</tr>
+</table>
+
+Rather another way? XRP, and the ways that cost nothing, are in [DONATE.md](DONATE.md).
 
 ## Licensing and source
 

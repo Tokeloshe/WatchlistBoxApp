@@ -1,12 +1,12 @@
 # Support WatchlistBox
 
-WatchlistBox is free and always will be. It is built by one developer, nights and weekends,
-so that one app can run on a television the way it deserves to. If it has made your evenings
-better, here are three ways to support the work, from easiest to free.
+WatchlistBox is free, and it stays free. One person makes it, in the evenings, so that one
+app can run on a television the way it deserves to. If it has earned the spot under your
+television, here are three ways to say so, from easiest to free.
 
 ## 1. Buy Me a Coffee (easiest)
 
-One click, any card, no crypto wallet needed.
+A coffee is $5. One tap, any card, no account needed.
 
 <p align="center">
   <a href="https://buymeacoffee.com/Tokeloshe">
@@ -15,11 +15,20 @@ One click, any card, no crypto wallet needed.
 </p>
 
 <p align="center">
-  <em>Or go to <a href="https://buymeacoffee.com/Tokeloshe">buymeacoffee.com/Tokeloshe</a></em>
+  <a href="https://buymeacoffee.com/Tokeloshe">
+    <img src="assets/bmc-qr-480.png" alt="Buy Me a Coffee QR code" width="160">
+  </a>
+  <br>
+  <em>Scan with your phone, or go to
+  <a href="https://buymeacoffee.com/Tokeloshe">buymeacoffee.com/Tokeloshe</a></em>
 </p>
 
-Every coffee goes straight back into the project: test machines, a television to try things
-on, and the late nights that turn bug reports into fixes.
+Every coffee goes straight back into the project:
+
+- **Apple's developer signing** ($99 a year), so that the Mac install becomes a plain
+  double-click, with no Terminal and no "Open Anyway".
+- **The evenings** that keep it working when Watchlist Pro changes, and that turn your bug
+  reports into fixes.
 
 ## 2. Donate via XRP (Ripple)
 
