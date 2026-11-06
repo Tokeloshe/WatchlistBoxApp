@@ -23,9 +23,8 @@
 
 ## Download
 
-Pick your computer. The Windows download carries the complete TV system; on a Mac it is a
-second download. The Watchlist Pro app itself downloads on the first start on both, so there
-is nothing else to fetch.
+Pick your computer. The TV system comes with it, and the Watchlist Pro app itself downloads on
+the first start, so there is nothing else to fetch.
 
 ### Windows (64-bit)
 
@@ -50,22 +49,40 @@ is nothing else to fetch.
 > fast: search the Start menu for **Turn Windows features on or off**, tick **Windows
 > Hypervisor Platform**, press OK, restart the PC, and start WatchlistBox again.
 
-> [!NOTE]
-> Prefer no installer? [WatchlistBox-Portable-x64.zip](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Portable-x64.zip)
-> (1.10 GB). Unzip the `WatchlistBox` folder anywhere you can write to, a USB stick included,
-> and run `WatchlistBox.exe`. Everything stays in `WatchlistBox\data`.
-
 ### macOS (Apple Silicon)
-
-<p>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg"><img src="https://img.shields.io/badge/Download%20for%20Mac-WatchlistBox--0.1.0--macOS--arm64.dmg-F5970E?style=for-the-badge" alt="Download WatchlistBox-0.1.0-macOS-arm64.dmg"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar"><img src="https://img.shields.io/badge/TV%20system-929%20MB-F5970E?style=for-the-badge" alt="Download the TV system"></a>
-</p>
 
 | | |
 | --- | --- |
-| **Size** | 55 MB app, plus the 929 MB TV system |
+| **Size** | 55 MB app, plus the 929 MB TV system; the installer fetches both |
 | **Needs** | An Apple Silicon Mac (M1 or later) with macOS 26 or later |
+
+Open **Terminal** (press <kbd>⌘</kbd><kbd>Space</kbd>, type `Terminal`, press Return), paste
+this one line and press Return:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/main/install.sh | bash
+```
+
+It downloads the app and the TV system, checks both, puts the app in Applications, and starts
+it. WatchlistBox then downloads the current Watchlist Pro app and opens it. Sign in with your
+own Watchlist Pro account and watch. From then on, open WatchlistBox from Applications like
+any app. Running the line again later updates it and keeps your settings.
+
+<details>
+<summary>Rather double-click than paste?</summary>
+
+Download [Install-WatchlistBox.command.zip](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/Install-WatchlistBox.command.zip),
+double-click the zip, then double-click **Install WatchlistBox.command**. The first time, macOS
+says it cannot be opened: press **Done**, open **System Settings › Privacy & Security**, scroll
+to Security, press **Open Anyway**, enter your password and press **Open**. It is the same
+installer as the line above, and it takes care of that step for the app itself.
+</details>
+
+<details>
+<summary>Rather do it by hand?</summary>
+
+Download [WatchlistBox-0.1.0-macOS-arm64.dmg](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg)
+and [the TV system](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar).
 
 1. Open the `.dmg`, open a second Finder window at Applications, and drag WatchlistBox into
    it. Always open it from Applications, not from the disk image or Downloads.
@@ -74,18 +91,14 @@ is nothing else to fetch.
 3. In Finder choose **Go › Go to Folder** and enter `~/Library/Application Support`. If there
    is no `WatchlistBox` folder there, make one (**File › New Folder**), and inside it a folder
    named `images`. Move the `wlb-tv-16.0-20261104-r2` folder into `images`.
-4. Double-click WatchlistBox in Applications.
+4. Double-click WatchlistBox in Applications. The first time, macOS says "WatchlistBox" Not
+   Opened: press **Done**, not Move to Trash. Open **System Settings › Privacy & Security**,
+   scroll to Security, press **Open Anyway** next to the WatchlistBox line, enter your password
+   and press **Open**. This happens once.
 5. WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own
    Watchlist Pro account and watch.
 
-> [!IMPORTANT]
-> The first open takes one extra step. macOS says "WatchlistBox" Not Opened: press **Done**,
-> not Move to Trash. Then open **System Settings › Privacy & Security**, scroll to Security,
-> press **Open Anyway** next to the WatchlistBox line, enter your password and press **Open**.
-> This happens once; after that it opens like any other app.
-
-<details>
-<summary>The same steps from Terminal</summary>
+The same from Terminal:
 
 ```sh
 mkdir -p "$HOME/Library/Application Support/WatchlistBox/images"
@@ -94,21 +107,12 @@ xattr -dr com.apple.quarantine /Applications/WatchlistBox.app
 ```
 </details>
 
-<details>
-<summary>Rather not use a disk image?</summary>
-
-[WatchlistBox-0.1.0-macOS-arm64.zip](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.zip)
-(49 MB) holds the same app.
-</details>
-
 ### Downloads so far
 
 | | Downloads |
 | --- | --- |
 | Windows installer | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Setup-x64.exe?label=&color=F5970E) |
-| Windows portable | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Portable-x64.zip?label=&color=F5970E) |
 | Mac app | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg?label=&color=F5970E) |
-| Mac TV system | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar?label=&color=F5970E) |
 
 <details>
 <summary>Checking a download</summary>
@@ -147,12 +151,11 @@ It is not a general-purpose Android emulator, and it runs one app only.
   "Windows" above).
 - **Windows: a card says the PC has no virtualisation.** Turn on Intel VT-x or AMD-V in the
   PC's firmware (BIOS or UEFI) settings, then start WatchlistBox again.
-- **Mac: the app bounces in the Dock and nothing opens.** Follow the first-open step under
-  "macOS" above (Open Anyway). If it still does not open, `~/Library/Logs/WatchlistBox/launch.log`
-  says how far it got; send it with your report.
-- **Mac: "The TV system is not installed".** The `wlb-tv-16.0-20261104-r2` folder is not under
-  `~/Library/Application Support/WatchlistBox/images`. Check step 3 under "macOS", then quit
-  WatchlistBox and open it again.
+- **Mac: the app bounces in the Dock and nothing opens.** Run the install line under "macOS"
+  again; it clears the block macOS puts on downloaded apps. If it still does not open,
+  `~/Library/Logs/WatchlistBox/launch.log` says how far it got; send it with your report.
+- **Mac: "The TV system is not installed".** Run the install line under "macOS" again; it puts
+  the TV system where the app looks for it. Then quit WatchlistBox and open it again.
 - **The TV box keeps stopping or will not start.** Press **Try again** on the card. If it
   happens every time, save the diagnostics zip from the card and report it.
 - **Something else.** Open an [issue](https://github.com/Tokeloshe/WatchlistBoxApp/issues)

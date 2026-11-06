@@ -224,22 +224,21 @@
   <section class="choose" id="download">
     <div class="wrap">
       <h2>Download</h2>
-      <p>Free. Both carry the complete TV system; the Watchlist Pro app downloads by itself on the first start.</p>
+      <p>Free. The TV system comes with it; the Watchlist Pro app downloads by itself on the first start.</p>
       <div class="platforms">
         <div class="platform">
           <h3>Windows</h3>
           <p class="fits">Windows 10 or 11, 64-bit</p>
           <a class="btn" href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe">Download the installer<small>WatchlistBox-Setup-x64.exe, 1.07 GB</small></a>
-          <a class="btn second" href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Portable-x64.zip">Portable zip instead<small>WatchlistBox-Portable-x64.zip, 1.10 GB</small></a>
           <span class="count"><b data-count="windows">—</b> Windows downloads</span>
         </div>
         <div class="platform">
           <h3>Mac</h3>
           <p class="fits">Apple Silicon (M1 or later), macOS 26</p>
-          <a class="btn" href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg">Download the app<small>WatchlistBox-0.1.0-macOS-arm64.dmg, 55 MB</small></a>
-          <a class="btn second" href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar">Download the TV system<small>WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar, 929 MB</small></a>
+          <p>Open Terminal, paste this line, press Return:</p>
+          <pre><code>curl -fsSL https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/main/install.sh | bash</code></pre>
+          <p class="alt">It downloads the app and the TV system, checks both, puts the app in Applications and starts it. Rather double-click? <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/Install-WatchlistBox.command.zip">Install-WatchlistBox.command.zip</a>, the same installer (macOS asks once to Open Anyway).</p>
           <span class="count"><b data-count="mac">—</b> Mac downloads</span>
-          <p class="alt">Both are needed. A <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.zip">plain zip of the app</a> (49 MB) is there for anyone who would rather not use a disk image.</p>
         </div>
       </div>
       <p class="total"><b data-count="all">—</b> downloads in all, counted by GitHub. Checksums for every file are in <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/SHA256SUMS.txt">SHA256SUMS.txt</a> on the <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/tag/v0.1.0">release page</a>.</p>
@@ -258,22 +257,23 @@
             <li>WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own Watchlist Pro account and watch.</li>
           </ol>
           <p>If WatchlistBox says hardware acceleration is off, the TV still runs, but slowly. To make it fast: search the Start menu for "Turn Windows features on or off", tick Windows Hypervisor Platform, press OK, restart the PC, and start WatchlistBox again.</p>
-          <details>
-            <summary>The portable zip</summary>
-            <p>Unzip the <code>WatchlistBox</code> folder anywhere writable, a USB drive included, and run <code>WatchlistBox.exe</code>. It keeps everything in <code>WatchlistBox\data</code>.</p>
-          </details>
         </div>
         <div>
           <h3>Mac</h3>
           <ol>
-            <li>Open the <code>.dmg</code>, open a second Finder window at Applications, and drag WatchlistBox into it. Always open it from Applications, not from the disk image or Downloads.</li>
-            <li>Double-click the downloaded <code>.tar</code>. It unpacks to a folder named <code>wlb-tv-16.0-20261104-r2</code>.</li>
-            <li>In Finder choose Go, then Go to Folder, and enter <code>~/Library/Application Support</code>. If there is no <code>WatchlistBox</code> folder there, make one (File, New Folder), and inside it a folder named <code>images</code>. Move the <code>wlb-tv-16.0-20261104-r2</code> folder into <code>images</code>.</li>
-            <li>Double-click WatchlistBox in Applications. macOS says "WatchlistBox" Not Opened. Press Done, not Move to Trash. Then open System Settings, Privacy &amp; Security, scroll to Security, press Open Anyway next to "WatchlistBox" was blocked, enter your password and press Open. That is once.</li>
+            <li>Open Terminal (press Command-Space, type Terminal, press Return), paste the install line from above and press Return. It downloads the app and the TV system, checks both, puts the app in Applications and starts it.</li>
             <li>WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own Watchlist Pro account and watch.</li>
+            <li>From then on, open WatchlistBox from Applications like any app. Running the install line again later updates it and keeps your settings.</li>
           </ol>
           <details>
-            <summary>The same from Terminal</summary>
+            <summary>Rather do it by hand?</summary>
+            <p>Download <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg">the app</a> (55 MB) and <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar">the TV system</a> (929 MB), then:</p>
+            <ol>
+              <li>Open the <code>.dmg</code>, open a second Finder window at Applications, and drag WatchlistBox into it. Always open it from Applications, not from the disk image or Downloads.</li>
+              <li>Double-click the downloaded <code>.tar</code>. It unpacks to a folder named <code>wlb-tv-16.0-20261104-r2</code>.</li>
+              <li>In Finder choose Go, then Go to Folder, and enter <code>~/Library/Application Support</code>. If there is no <code>WatchlistBox</code> folder there, make one (File, New Folder), and inside it a folder named <code>images</code>. Move the <code>wlb-tv-16.0-20261104-r2</code> folder into <code>images</code>.</li>
+              <li>Double-click WatchlistBox in Applications. macOS says "WatchlistBox" Not Opened: press Done, not Move to Trash. Then open System Settings, Privacy &amp; Security, scroll to Security, press Open Anyway next to the WatchlistBox line, enter your password and press Open. That is once.</li>
+            </ol>
 <pre><code>mkdir -p "$HOME/Library/Application Support/WatchlistBox/images"
 tar -xf ~/Downloads/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar -C "$HOME/Library/Application Support/WatchlistBox/images"
 xattr -dr com.apple.quarantine /Applications/WatchlistBox.app</code></pre>
@@ -344,8 +344,8 @@ xattr -dr com.apple.quarantine /Applications/WatchlistBox.app</code></pre>
 
   // Download counts: every release, every asset, summed by platform.
   function kind(name) {
-    if (/\.exe$/i.test(name) || /^WatchlistBox-Portable-.*\.zip$/i.test(name)) return "windows";
-    if (/-macOS-arm64\.(dmg|zip)$/i.test(name)) return "mac";
+    if (/\.exe$/i.test(name)) return "windows";
+    if (/-macOS-arm64\.dmg$/i.test(name)) return "mac";
     return "other";
   }
   function show(id, value) {
