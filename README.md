@@ -10,10 +10,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/latest"><img src="https://img.shields.io/github/v/release/Tokeloshe/WatchlistBoxApp?label=release&color=1F6FEB" alt="Latest release"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Setup-x64.exe?label=Windows&color=F5970E" alt="Windows downloads"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg?label=Mac&color=F5970E" alt="Mac downloads"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/total?label=all%20downloads&color=F5970E" alt="All downloads"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/latest"><img src="https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/release.svg" alt="Latest release"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/windows.svg" alt="Windows downloads"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg"><img src="https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/mac.svg" alt="Mac downloads"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases"><img src="https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/all.svg" alt="All downloads"></a>
   <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-%245-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
 </p>
 
@@ -141,8 +141,8 @@ xattr -dr com.apple.quarantine /Applications/WatchlistBox.app
 
 | | Downloads |
 | --- | --- |
-| Windows installer | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Setup-x64.exe?label=&color=F5970E) |
-| Mac app | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg?label=&color=F5970E) |
+| Windows installer | ![](https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/windows-count.svg) |
+| Mac app | ![](https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/mac-count.svg) |
 
 <details>
 <summary>Checking a download</summary>
