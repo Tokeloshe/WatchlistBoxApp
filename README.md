@@ -6,9 +6,7 @@
 
 <p align="center">
   <b>Your computer, as the box under the television.</b><br>
-  WatchlistBox turns a Windows PC or an Apple Silicon Mac into a set-top box for Watchlist Pro:<br>
-  it boots straight into the app and plays your films full screen, driven by a keyboard,<br>
-  a game controller or a mouse. Free.
+  WatchlistBox turns a Windows PC or an Apple Silicon Mac into a set-top box for Watchlist Pro: it boots straight into the app and plays your films full screen, driven by a keyboard, a game controller or a mouse. Free.
 </p>
 
 <p align="center">
@@ -28,8 +26,8 @@ there is nothing else to fetch. Pick your computer.
 <tr>
 <td align="center" width="50%" valign="top">
 <br>
-<img src="assets/icon-windows-pc.svg" width="44" alt="">
-<h3>Windows</h3>
+<a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="assets/icon-windows-pc.svg" width="44" alt=""></a>
+<br><b>Windows</b><br>
 <sub>Windows 10 (version 1809) or Windows 11, 64-bit</sub>
 <br><br>
 <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows-F5970E?style=for-the-badge" alt="Download for Windows"></a>
@@ -39,8 +37,8 @@ there is nothing else to fetch. Pick your computer.
 </td>
 <td align="center" width="50%" valign="top">
 <br>
-<img src="assets/icon-mac-laptop.svg" width="44" alt="">
-<h3>Mac</h3>
+<a href="#macos-apple-silicon"><img src="assets/icon-mac-laptop.svg" width="44" alt=""></a>
+<br><b>Mac</b><br>
 <sub>Apple Silicon (M1 or later), macOS 26 or later</sub>
 <br><br>
 <a href="#macos-apple-silicon"><img src="https://img.shields.io/badge/Install%20on%20Mac-F5970E?style=for-the-badge" alt="Install on Mac"></a>
@@ -58,11 +56,13 @@ there is nothing else to fetch. Pick your computer.
 | **Download** | [WatchlistBox-Setup-x64.exe](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe), 1.07 GB |
 | **Needs** | Windows 10 version 1809 or later, or Windows 11, 64-bit; a CPU with virtualisation (Intel VT-x or AMD-V, turned on in the PC's firmware); a few gigabytes of free disk space |
 
-1. Open the downloaded file and press **Install**. It installs for your user account, needs
-   no administrator password and no restart, and then offers to start WatchlistBox.
-2. Start WatchlistBox. When Windows asks whether WatchlistBox may add a firewall rule, press
+1. Open the downloaded file. Windows SmartScreen says "Windows protected your PC" because the
+   installer is new to it: press **More info**, then **Run anyway**.
+2. Press **Install**. It installs for your user account, needs no administrator password and
+   no restart, and then offers to start WatchlistBox.
+3. Start WatchlistBox. When Windows asks whether WatchlistBox may add a firewall rule, press
    **Yes**. Films cannot play without it, and the question comes once.
-3. WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own
+4. WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own
    Watchlist Pro account and watch.
 
 > [!TIP]
@@ -131,8 +131,9 @@ xattr -dr com.apple.quarantine /Applications/WatchlistBox.app
 <p align="center">
   <br>
   <img src="assets/icon-coffee.svg" width="28" alt=""><br>
-  <sub>Playing your first film? If WatchlistBox has earned the spot under your television,<br>
-  <a href="https://buymeacoffee.com/Tokeloshe"><b>buy me a coffee</b></a> ($5). It is what keeps it free.</sub>
+  <b>Playing your first film?</b><br>
+  If WatchlistBox has earned the spot under your television, a coffee ($5) is the nicest way to say so.<br><br>
+  <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" height="48"></a>
   <br><br>
 </p>
 
@@ -193,12 +194,14 @@ It is not a general-purpose Android emulator, and it runs one app only.
 
 ## Support the project
 
-WatchlistBox is free, and it stays free. One person makes it, in the evenings. If it has
-earned the spot under your television, a coffee ($5) says so, and every coffee goes straight
-back into the project:
+I make WatchlistBox in the evenings, and it stays free. If it has earned the spot under your
+television, a coffee ($5) is the nicest way to say so, and every one goes straight back into
+it:
 
-- **Apple's developer signing** ($99 a year), so that the Mac install becomes a plain
-  double-click, with no Terminal and no "Open Anyway".
+- **Apple's developer signing** ($99 a year, which is twenty coffees), so that the Mac install
+  becomes a plain double-click, with no Terminal and no "Open Anyway".
+- **A Windows code-signing certificate**, so that the installer opens without the SmartScreen
+  warning.
 - **The evenings** that keep it working when Watchlist Pro changes, and that turn your bug
   reports into fixes.
 
@@ -208,12 +211,12 @@ back into the project:
 <br>
 <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60"></a>
 <br><br>
-<sub>One tap, any card, no account needed.</sub>
+<sub>About a minute. Any card, no account needed.</sub>
 <br><br>
 </td>
 <td align="center" valign="middle" width="44%">
 <br>
-<a href="https://buymeacoffee.com/Tokeloshe"><img src="assets/bmc-qr-480.png" alt="Buy Me a Coffee QR code" width="140"></a>
+<a href="https://buymeacoffee.com/Tokeloshe"><img src="assets/bmc-qr-480.png" alt="Buy Me a Coffee QR code" width="160"></a>
 <br>
 <sub>From the sofa: scan with your phone</sub>
 <br><br>
@@ -221,7 +224,8 @@ back into the project:
 </tr>
 </table>
 
-Rather another way? XRP, and the ways that cost nothing, are in [DONATE.md](DONATE.md).
+Can't right now? A star on this page or a bug report helps just as much. XRP and the other
+ways are in [DONATE.md](DONATE.md).
 
 ## Licensing and source
 

@@ -1,12 +1,12 @@
 # Support WatchlistBox
 
-WatchlistBox is free, and it stays free. One person makes it, in the evenings, so that one
-app can run on a television the way it deserves to. If it has earned the spot under your
-television, here are three ways to say so, from easiest to free.
+I make WatchlistBox in the evenings, and it stays free, so that one app can run on a
+television the way it deserves to. If it has earned the spot under your television, here are
+three ways to say so, from easiest to free.
 
 ## 1. Buy Me a Coffee (easiest)
 
-A coffee is $5. One tap, any card, no account needed.
+A coffee is $5. About a minute: any card, no account needed.
 
 <p align="center">
   <a href="https://buymeacoffee.com/Tokeloshe">
@@ -25,8 +25,10 @@ A coffee is $5. One tap, any card, no account needed.
 
 Every coffee goes straight back into the project:
 
-- **Apple's developer signing** ($99 a year), so that the Mac install becomes a plain
-  double-click, with no Terminal and no "Open Anyway".
+- **Apple's developer signing** ($99 a year, which is twenty coffees), so that the Mac install
+  becomes a plain double-click, with no Terminal and no "Open Anyway".
+- **A Windows code-signing certificate**, so that the installer opens without the SmartScreen
+  warning.
 - **The evenings** that keep it working when Watchlist Pro changes, and that turn your bug
   reports into fixes.
 
