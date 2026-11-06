@@ -15,8 +15,6 @@
   <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Tokeloshe-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
 </p>
 
-For my brother, George Thomas Honiball, whose deep appreciation of film and television inspired this project.
-
 WatchlistBox turns a Windows PC or an Apple Silicon Mac into a dedicated set-top box for
 Watchlist Pro: one download, boots straight into the app, plays films full screen with a
 remote, keyboard, gamepad or mouse. Free. Source-available with an open-source core.
@@ -167,4 +165,6 @@ repository holds the downloads, the licences and the documents a person needs to
 run WatchlistBox. Security reports go through [SECURITY.md](SECURITY.md); conduct in this
 space follows [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
-Copyright 2026 James Honiball.
+---
+
+Copyright 2026 James Honiball. *A Honiball brothers app, for George: [DEDICATION.md](DEDICATION.md).*
