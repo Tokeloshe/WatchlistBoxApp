@@ -1,136 +1,168 @@
 <p align="center">
-  <img src="assets/watchlistbox-wordmark.svg" alt="WatchlistBox" width="560">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/watchlistbox-wordmark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/watchlistbox-wordmark-light.svg">
+    <img src="assets/watchlistbox-wordmark-light.svg" alt="WatchlistBox" width="520">
+  </picture>
 </p>
 
-<h1 align="center">WatchlistBox</h1>
 <p align="center"><em>A Honiball brothers app</em></p>
 
 <p align="center">
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/latest"><img src="https://img.shields.io/github/v/release/Tokeloshe/WatchlistBoxApp?label=release&color=blue" alt="Latest release"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Setup-x64.exe?label=Windows%20installer&color=success" alt="Windows installer downloads"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Portable-x64.zip"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Portable-x64.zip?label=Windows%20portable&color=success" alt="Windows portable downloads"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg?label=Mac%20app&color=success" alt="Mac app downloads"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar?label=Mac%20TV%20system&color=success" alt="Mac TV system downloads"></a>
-  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/total?label=all%20downloads&color=orange" alt="All downloads"></a>
-  <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-Tokeloshe-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/latest"><img src="https://img.shields.io/github/v/release/Tokeloshe/WatchlistBoxApp?label=release&color=1F6FEB" alt="Latest release"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Setup-x64.exe?label=Windows&color=F5970E" alt="Windows downloads"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg?label=Mac&color=F5970E" alt="Mac downloads"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases"><img src="https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/total?label=all%20downloads&color=F5970E" alt="All downloads"></a>
 </p>
 
-WatchlistBox turns a Windows PC or an Apple Silicon Mac into a dedicated set-top box for
-Watchlist Pro: one download, boots straight into the app, plays films full screen with a
-remote, keyboard, gamepad or mouse. Free. Source-available with an open-source core.
-
-This page holds the downloads and the documents that go with them (see "Source" below).
+<p align="center">
+  WatchlistBox turns a Windows PC or an Apple Silicon Mac into a set-top box for Watchlist Pro.<br>
+  One download, and the computer boots straight into the app and plays your films full screen,<br>
+  driven by a keyboard, a game controller or a mouse. Free.
+</p>
 
 ## Download
 
-Pick your computer. Both downloads carry the complete TV system; the Watchlist Pro app itself
-downloads on the first start, so there is nothing else to fetch.
+Pick your computer. The Windows download carries the complete TV system; on a Mac it is a
+second download. The Watchlist Pro app itself downloads on the first start on both, so there
+is nothing else to fetch.
 
-### Windows
+### Windows (64-bit)
 
-**[Download WatchlistBox-Setup-x64.exe](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe)** (1.07 GB, Windows 10 or 11, 64-bit)
+<p>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://img.shields.io/badge/Download%20for%20Windows-WatchlistBox--Setup--x64.exe-F5970E?style=for-the-badge" alt="Download WatchlistBox-Setup-x64.exe"></a>
+</p>
 
-1. Open the downloaded file and press Install. It installs for you alone, without
-   administrator rights and without a restart, then offers to launch WatchlistBox.
-2. On the first start WatchlistBox checks the PC. If the Windows Hypervisor Platform is not
-   on yet, it asks Windows once for permission to turn it on, and Windows then needs one
-   restart. Start WatchlistBox again afterwards.
-3. The first time the firewall rule for the player is missing, WatchlistBox asks Windows for
-   permission once more. Press Yes; films cannot play without it.
-4. WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own
-   Watchlist Pro account (it allows two devices) and watch.
+| | |
+| --- | --- |
+| **Size** | 1.07 GB, the TV system included |
+| **Needs** | Windows 10 version 1809 or later, or Windows 11; a CPU with virtualisation (Intel VT-x or AMD-V, turned on in the PC's firmware); a few gigabytes of free disk space |
 
-Prefer no installer? **[WatchlistBox-Portable-x64.zip](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Portable-x64.zip)**
-(1.10 GB): unzip the `WatchlistBox` folder anywhere writable, a USB drive included, and run
-`WatchlistBox.exe`. The portable copy keeps everything in `WatchlistBox\data`.
+1. Open the downloaded file and press **Install**. It installs for your user account, needs
+   no administrator password and no restart, and then offers to start WatchlistBox.
+2. Start WatchlistBox. When Windows asks whether WatchlistBox may add a firewall rule, press
+   **Yes**. Films cannot play without it, and the question comes once.
+3. WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own
+   Watchlist Pro account and watch.
 
-### Mac
+> [!TIP]
+> If WatchlistBox says hardware acceleration is off, the TV still runs, but slowly. To make it
+> fast: search the Start menu for **Turn Windows features on or off**, tick **Windows
+> Hypervisor Platform**, press OK, restart the PC, and start WatchlistBox again.
 
-**[Download WatchlistBox-0.1.0-macOS-arm64.dmg](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg)** (55 MB, Apple Silicon, macOS 26)
-and **[the TV system](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar)** (929 MB)
+> [!NOTE]
+> Prefer no installer? [WatchlistBox-Portable-x64.zip](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Portable-x64.zip)
+> (1.10 GB). Unzip the `WatchlistBox` folder anywhere you can write to, a USB stick included,
+> and run `WatchlistBox.exe`. Everything stays in `WatchlistBox\data`.
 
-1. Open the `.dmg` and drag WatchlistBox into Applications. Open it from there, not from
-   Downloads.
+### macOS (Apple Silicon)
+
+<p>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg"><img src="https://img.shields.io/badge/Download%20for%20Mac-WatchlistBox--0.1.0--macOS--arm64.dmg-F5970E?style=for-the-badge" alt="Download WatchlistBox-0.1.0-macOS-arm64.dmg"></a>
+  <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar"><img src="https://img.shields.io/badge/TV%20system-929%20MB-F5970E?style=for-the-badge" alt="Download the TV system"></a>
+</p>
+
+| | |
+| --- | --- |
+| **Size** | 55 MB app, plus the 929 MB TV system |
+| **Needs** | An Apple Silicon Mac (M1 or later) with macOS 26 or later |
+
+1. Open the `.dmg`, open a second Finder window at Applications, and drag WatchlistBox into
+   it. Always open it from Applications, not from the disk image or Downloads.
 2. Double-click the downloaded `.tar`. It unpacks to a folder named
    `wlb-tv-16.0-20261104-r2`.
-3. In Finder choose Go > Go to Folder, enter
-   `~/Library/Application Support/WatchlistBox/images` (create the `WatchlistBox` and
-   `images` folders if they are not there), and move the `wlb-tv-16.0-20261104-r2` folder
-   into it.
-4. Double-click WatchlistBox in Applications. macOS says "WatchlistBox" Not Opened. Press
-   Done, not Move to Trash. Then open System Settings > Privacy & Security, scroll to
-   Security, press Open Anyway next to "WatchlistBox" was blocked, enter your password and
-   press Open. That is once; from now on it opens like any other app.
+3. In Finder choose **Go › Go to Folder** and enter `~/Library/Application Support`. If there
+   is no `WatchlistBox` folder there, make one (**File › New Folder**), and inside it a folder
+   named `images`. Move the `wlb-tv-16.0-20261104-r2` folder into `images`.
+4. Double-click WatchlistBox in Applications.
 5. WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own
-   Watchlist Pro account (it allows two devices) and watch.
+   Watchlist Pro account and watch.
 
-The same steps from Terminal, for those who prefer it:
+> [!IMPORTANT]
+> The first open takes one extra step. macOS says "WatchlistBox" Not Opened: press **Done**,
+> not Move to Trash. Then open **System Settings › Privacy & Security**, scroll to Security,
+> press **Open Anyway** next to the WatchlistBox line, enter your password and press **Open**.
+> This happens once; after that it opens like any other app.
+
+<details>
+<summary>The same steps from Terminal</summary>
 
 ```sh
 mkdir -p "$HOME/Library/Application Support/WatchlistBox/images"
 tar -xf ~/Downloads/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar -C "$HOME/Library/Application Support/WatchlistBox/images"
 xattr -dr com.apple.quarantine /Applications/WatchlistBox.app
 ```
+</details>
 
-A plain zip of the Mac app, **[WatchlistBox-0.1.0-macOS-arm64.zip](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.zip)**
-(49 MB), holds the same app for anyone who would rather not use a disk image.
+<details>
+<summary>Rather not use a disk image?</summary>
 
-Every download has its SHA-256 in
+[WatchlistBox-0.1.0-macOS-arm64.zip](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.zip)
+(49 MB) holds the same app.
+</details>
+
+### Downloads so far
+
+| | Downloads |
+| --- | --- |
+| Windows installer | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Setup-x64.exe?label=&color=F5970E) |
+| Windows portable | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-Portable-x64.zip?label=&color=F5970E) |
+| Mac app | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg?label=&color=F5970E) |
+| Mac TV system | ![](https://img.shields.io/github/downloads/Tokeloshe/WatchlistBoxApp/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar?label=&color=F5970E) |
+
+<details>
+<summary>Checking a download</summary>
+
+Every file's SHA-256 is in
 [SHA256SUMS.txt](https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/SHA256SUMS.txt)
 on the release page.
+</details>
 
 ## What it does
 
-- Boots its own Android 16 TV system in a virtual machine and opens Watchlist Pro on it, with no
-  Android desktop, launcher or setup wizard in between. When the app closes, the box opens it
-  again.
-- Shows the picture full screen, the way a box behind the television would, on the monitor or
-  TV you choose.
-- Takes a keyboard, a mouse (a click is a tap, the right button is Back, the wheel scrolls) and
-  a game controller.
-- Blocks trackers and advertising for the TV system at the DNS layer, with a bundled list that
-  works offline and daily updates from the public lists.
-- Keeps everything of yours (the TV profile, settings, logs) in your own user folder:
+- **Boots straight into Watchlist Pro.** Its own Android 16 TV system starts in a virtual
+  machine and opens the app, with no Android desktop, launcher or setup wizard in between.
+  When the app closes, WatchlistBox opens it again.
+- **Full screen.** On Windows the picture fills the monitor or TV you choose, the way a box
+  behind the television would; on a Mac it opens in its own window.
+- **Keyboard, mouse, game controller.** A click is a tap, the right button is Back, the
+  wheel moves up and down the page.
+- **Blocks trackers and advertising** for the TV system at the DNS layer, with a bundled list
+  that works offline and daily updates from the public lists.
+- **Your data stays yours.** The TV profile, settings and logs live in your own user folder:
   `%LOCALAPPDATA%\WatchlistBox` on Windows, `~/Library/Application Support/WatchlistBox` on a
-  Mac. Uninstalling asks whether to remove it.
-- Sends no usage data anywhere. The connections it makes are to Watchlist Pro's own servers,
-  the app download, and the public filter lists.
+  Mac. The Windows uninstaller asks whether to remove it; on a Mac, delete that folder
+  yourself.
+- **Sends nothing home.** The connections it makes are to Watchlist Pro's own servers, the
+  app download, and the public filter lists.
 
 It is not a general-purpose Android emulator, and it runs one app only.
 
-## Requirements
-
-**Windows**: Windows 10 version 1809 or later, or Windows 11, 64-bit; a CPU with virtualisation
-extensions (Intel VT-x or AMD-V, on in the firmware) and the Windows Hypervisor Platform
-feature, which the first start turns on for you; a few gigabytes of free disk space for the
-TV system and your profile.
-
-**Mac**: an Apple Silicon Mac (M1 or later) running macOS 26 or later. This build was made with
-Homebrew's Qt, which ties it to the macOS it was built on; a build for older versions of macOS
-is planned.
-
 ## Troubleshooting
 
-- **Windows: a card says the Hypervisor Platform or the firewall rule is missing.** Press the
-  card's Allow or Enable button; Windows asks for an administrator once. The Hypervisor Platform
-  needs a restart after it is turned on.
-- **Windows: the card says the PC has no virtualisation.** Turn on Intel VT-x or AMD-V in the
+- **Windows: a card says films may not start (the firewall).** Press **Allow in firewall** and
+  approve the Windows prompt.
+- **Windows: a card says hardware acceleration is off.** Turn on the Windows Hypervisor
+  Platform in Windows Features, restart the PC, and start WatchlistBox again (the tip under
+  "Windows" above).
+- **Windows: a card says the PC has no virtualisation.** Turn on Intel VT-x or AMD-V in the
   PC's firmware (BIOS or UEFI) settings, then start WatchlistBox again.
-- **Mac: the app bounces in the Dock and nothing opens.** Follow step 4 under "Mac" above
-  (Open Anyway). If it still does not open, `~/Library/Logs/WatchlistBox/launch.log` says how
-  far it got; send it with your report.
+- **Mac: the app bounces in the Dock and nothing opens.** Follow the first-open step under
+  "macOS" above (Open Anyway). If it still does not open, `~/Library/Logs/WatchlistBox/launch.log`
+  says how far it got; send it with your report.
 - **Mac: "The TV system is not installed".** The `wlb-tv-16.0-20261104-r2` folder is not under
-  `~/Library/Application Support/WatchlistBox/images`. Check step 3 under "Mac".
-- **A film shows no picture, or sound only.** Quit WatchlistBox and start it again. If it
-  happens every time, report it with the diagnostics zip from the error card.
-- **Something else.** Open an [issue](https://github.com/Tokeloshe/WatchlistBoxApp/issues) with
-  your Windows or macOS version and the diagnostics zip the error card offers; it holds the
-  logs and the hardware summary and no account details.
+  `~/Library/Application Support/WatchlistBox/images`. Check step 3 under "macOS", then quit
+  WatchlistBox and open it again.
+- **The TV box keeps stopping or will not start.** Press **Try again** on the card. If it
+  happens every time, save the diagnostics zip from the card and report it.
+- **Something else.** Open an [issue](https://github.com/Tokeloshe/WatchlistBoxApp/issues)
+  with your Windows or macOS version and the diagnostics zip the card offers. It holds the
+  logs, your settings and the hardware summary, with your folder names blanked.
 
 ## Support the project
 
-WatchlistBox is free, built by one developer in the evenings. If it has given your television
-a better box, a coffee keeps the lights on.
+WatchlistBox is free and made by one person. If it has earned a place under your television,
+a coffee is a fine way to say so.
 
 <p align="center">
   <a href="https://buymeacoffee.com/Tokeloshe">
@@ -140,31 +172,22 @@ a better box, a coffee keeps the lights on.
 
 Other ways, including XRP and the ones that cost nothing, are in [DONATE.md](DONATE.md).
 
-## Licensing
+## Licensing and source
 
-WatchlistBox is source-available with an open-source core.
-
-- Most of the program is under the [Apache License 2.0](LICENSE).
-- Four components that hold the project's novel work (the frame and audio path, the DNS filter,
-  the kiosk agent, the TV image tooling) are under the
-  [WatchlistBox Commercial Licence](LICENSE-COMMERCIAL.md): read, build and contribute freely,
-  run the official downloads for personal use, ask for anything else.
-- QEMU (GPLv2) ships beside the program as a separate program, and the Android TV system is redistributed under its own licences, GPL ones among them. The
-  complete corresponding source is offered in [SOURCE-OFFER.md](SOURCE-OFFER.md).
-- Every bundled component is credited in [NOTICE](NOTICE) and in the third-party notices for
-  [Windows](THIRD-PARTY-NOTICES-windows.txt) and [macOS](THIRD-PARTY-NOTICES-macos.txt).
+WatchlistBox's own code is mostly under the [Apache License 2.0](LICENSE); four components
+(the frame and audio path, the DNS filter, the kiosk agent, the TV image tooling) are under
+the [WatchlistBox Commercial Licence](LICENSE-COMMERCIAL.md), which allows personal use of
+the official downloads. The source repository is not public yet. QEMU ships beside the
+program as a separate GPL program, and the TV system carries its own licences, GPL ones among
+them; their complete source is offered in [SOURCE-OFFER.md](SOURCE-OFFER.md). Every bundled
+component is credited in [NOTICE](NOTICE) and in the third-party notices for
+[Windows](THIRD-PARTY-NOTICES-windows.txt) and [macOS](THIRD-PARTY-NOTICES-macos.txt).
 
 Watchlist Pro is a third-party service and application. WatchlistBox is not affiliated with it;
 the app is downloaded from its publisher on your computer and is never redistributed here.
 
-## Source
-
-The program's source tree, build system and documentation live in the developer's own
-repository, which is not open yet. Until then, the source of the GPL parts is available now through [SOURCE-OFFER.md](SOURCE-OFFER.md). This
-repository holds the downloads, the licences and the documents a person needs to install and
-run WatchlistBox. Security reports go through [SECURITY.md](SECURITY.md); conduct in this
-space follows [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+Security reports: [SECURITY.md](SECURITY.md). Conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ---
 
-Copyright 2026 James Honiball. *A Honiball brothers app, for George: [DEDICATION.md](DEDICATION.md).*
+<p align="center"><sub>Copyright 2026 James Honiball · <em>A Honiball brothers app, for George: <a href="DEDICATION.md">DEDICATION.md</a></em></sub></p>

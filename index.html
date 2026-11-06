@@ -253,11 +253,11 @@
         <div>
           <h3>Windows</h3>
           <ol>
-            <li>Open the downloaded file and press Install. It installs for you alone, without administrator rights and without a restart, then offers to launch WatchlistBox.</li>
-            <li>On the first start WatchlistBox checks the PC. If the Windows Hypervisor Platform is not on yet, it asks Windows once for permission to turn it on; Windows then needs one restart. Start WatchlistBox again afterwards.</li>
-            <li>The first time the firewall rule for the player is missing, WatchlistBox asks Windows for permission once more. Press Yes; films cannot play without it.</li>
-            <li>WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own Watchlist Pro account (it allows two devices) and watch.</li>
+            <li>Open the downloaded file and press Install. It installs for your user account, needs no administrator password and no restart, and then offers to start WatchlistBox.</li>
+            <li>Start WatchlistBox. When Windows asks whether WatchlistBox may add a firewall rule, press Yes. Films cannot play without it, and the question comes once.</li>
+            <li>WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own Watchlist Pro account and watch.</li>
           </ol>
+          <p>If WatchlistBox says hardware acceleration is off, the TV still runs, but slowly. To make it fast: search the Start menu for "Turn Windows features on or off", tick Windows Hypervisor Platform, press OK, restart the PC, and start WatchlistBox again.</p>
           <details>
             <summary>The portable zip</summary>
             <p>Unzip the <code>WatchlistBox</code> folder anywhere writable, a USB drive included, and run <code>WatchlistBox.exe</code>. It keeps everything in <code>WatchlistBox\data</code>.</p>
@@ -266,11 +266,11 @@
         <div>
           <h3>Mac</h3>
           <ol>
-            <li>Open the <code>.dmg</code> and drag WatchlistBox into Applications. Open it from there, not from Downloads.</li>
+            <li>Open the <code>.dmg</code>, open a second Finder window at Applications, and drag WatchlistBox into it. Always open it from Applications, not from the disk image or Downloads.</li>
             <li>Double-click the downloaded <code>.tar</code>. It unpacks to a folder named <code>wlb-tv-16.0-20261104-r2</code>.</li>
-            <li>In Finder choose Go, then Go to Folder, enter <code>~/Library/Application Support/WatchlistBox/images</code> (create the <code>WatchlistBox</code> and <code>images</code> folders if they are not there), and move the <code>wlb-tv-16.0-20261104-r2</code> folder into it.</li>
+            <li>In Finder choose Go, then Go to Folder, and enter <code>~/Library/Application Support</code>. If there is no <code>WatchlistBox</code> folder there, make one (File, New Folder), and inside it a folder named <code>images</code>. Move the <code>wlb-tv-16.0-20261104-r2</code> folder into <code>images</code>.</li>
             <li>Double-click WatchlistBox in Applications. macOS says "WatchlistBox" Not Opened. Press Done, not Move to Trash. Then open System Settings, Privacy &amp; Security, scroll to Security, press Open Anyway next to "WatchlistBox" was blocked, enter your password and press Open. That is once.</li>
-            <li>WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own Watchlist Pro account (it allows two devices) and watch.</li>
+            <li>WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own Watchlist Pro account and watch.</li>
           </ol>
           <details>
             <summary>The same from Terminal</summary>
@@ -288,17 +288,17 @@ xattr -dr com.apple.quarantine /Applications/WatchlistBox.app</code></pre>
       <h2>What it does</h2>
       <div class="cols">
         <ul>
-          <li>Boots its own Android 16 TV system in a virtual machine and opens Watchlist Pro on it, with no Android desktop, launcher or setup wizard in between. When the app closes, the box opens it again.</li>
-          <li>Shows the picture full screen, the way a box behind the television would, on the monitor or TV you choose.</li>
-          <li>Takes a keyboard, a mouse (a click is a tap, the right button is Back, the wheel scrolls) and a game controller.</li>
+          <li>Boots its own Android 16 TV system in a virtual machine and opens Watchlist Pro on it, with no Android desktop, launcher or setup wizard in between. When the app closes, WatchlistBox opens it again.</li>
+          <li>On Windows the picture fills the monitor or TV you choose, the way a box behind the television would; on a Mac it opens in its own window.</li>
+          <li>Takes a keyboard, a mouse (a click is a tap, the right button is Back, the wheel moves up and down the page) and a game controller.</li>
         </ul>
         <ul>
           <li>Blocks trackers and advertising for the TV system at the DNS layer, with a bundled list that works offline and daily updates from the public lists.</li>
-          <li>Keeps everything of yours in your own user folder and sends no usage data anywhere. Uninstalling asks whether to remove your data.</li>
+          <li>Keeps everything of yours in your own user folder and sends no usage data anywhere. The Windows uninstaller asks whether to remove it; on a Mac you delete that folder yourself.</li>
           <li>Runs one app only. It is not a general-purpose Android emulator.</li>
         </ul>
       </div>
-      <p>Needs: on Windows, a CPU with virtualisation extensions and a few gigabytes of free disk space; on a Mac, an Apple Silicon chip and macOS 26 or later (this build was made with Homebrew's Qt, which ties it to the macOS it was built on; a build for older versions is planned). Trouble? The <a href="https://github.com/Tokeloshe/WatchlistBoxApp#troubleshooting">troubleshooting notes</a> cover the usual cases, and an <a href="https://github.com/Tokeloshe/WatchlistBoxApp/issues">issue</a> with the diagnostics zip from the error card reaches the developer.</p>
+      <p>Needs: on Windows, a CPU with virtualisation extensions and a few gigabytes of free disk space; on a Mac, an Apple Silicon chip and macOS 26 or later (this build is tied to the macOS it was built on). Trouble? The <a href="https://github.com/Tokeloshe/WatchlistBoxApp#troubleshooting">troubleshooting notes</a> cover the usual cases, and an <a href="https://github.com/Tokeloshe/WatchlistBoxApp/issues">issue</a> with the diagnostics zip from the error card reaches the developer.</p>
     </div>
   </section>
 
@@ -316,7 +316,7 @@ xattr -dr com.apple.quarantine /Applications/WatchlistBox.app</code></pre>
 
 <footer>
   <div class="wrap">
-    <p>Copyright 2026 James Honiball. Source-available with an open-source core: most of the program is under the <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/LICENSE">Apache License 2.0</a>, four components under the <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/LICENSE-COMMERCIAL.md">WatchlistBox Commercial Licence</a>; QEMU ships beside it as a separate GPL program and the TV system under its own licences, with the complete source offered in <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/SOURCE-OFFER.md">SOURCE-OFFER.md</a>.</p>
+    <p>Copyright 2026 James Honiball. Most of the program is under the <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/LICENSE">Apache License 2.0</a>, four components under the <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/LICENSE-COMMERCIAL.md">WatchlistBox Commercial Licence</a>; QEMU ships beside it as a separate GPL program and the TV system under its own licences, with the complete source offered in <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/SOURCE-OFFER.md">SOURCE-OFFER.md</a>.</p>
     <p>Watchlist Pro is a third-party service and application; WatchlistBox is not affiliated with it. <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/SECURITY.md">Security</a> · <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/CHANGELOG.md">Changelog</a> · <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/DEDICATION.md">For George</a></p>
   </div>
 </footer>
