@@ -1,0 +1,157 @@
+WatchlistBox
+Copyright 2026 James Honiball
+
+This product is developed and maintained by James Honiball.
+
+Unless a file's own header, this file or docs/licensing.md says otherwise,
+the WatchlistBox source code is licensed under the Apache License,
+Version 2.0 (see LICENSE).
+
+=======================================================================
+Components under the WatchlistBox Commercial Licence
+=======================================================================
+
+The following components are Copyright 2026 James Honiball and are made
+available under the WatchlistBox Commercial Licence, Version 1.0
+(see LICENSE-COMMERCIAL.md), not under the Apache License:
+
+  * core/vmbus          Windows client for QEMU's D-Bus display and audio
+                        interfaces, with the shared-memory and shared-texture
+                        presenter bridge
+  * core/dns and dnsd   DNS filter engine with per-list exception masks, the
+                        wlbl compiled database and compiler, and the guest
+                        DNS enforcement design
+  * guest/agent         Android device-owner agent and the host backstop
+                        protocol (kiosk watchdog)
+  * core/hwinfo         The HardwareAdvisor component only
+
+Their source files carry SPDX-License-Identifier: LicenseRef-WatchlistBox-Commercial-1.0.
+
+=======================================================================
+Third-party software vendored in this source tree (third_party/)
+=======================================================================
+
+Monocypher 4.0.2
+  Copyright (c) 2017-2023, Loup Vaillant
+  Copyright (c) 2017-2019, Michael Savage
+  Copyright (c) 2017-2023, Fabio Scotoni
+  Licence: BSD-2-Clause OR CC0-1.0 (third_party/monocypher/LICENCE.md)
+  Source:  https://monocypher.org/ and https://github.com/LoupVaillant/Monocypher
+
+miniz 3.0.2
+  Copyright 2013-2014 RAD Game Tools and Valve Software
+  Copyright 2010-2014 Rich Geldreich and Tenacious Software LLC
+  Licence: MIT (third_party/miniz/LICENSE)
+  Source:  https://github.com/richgel999/miniz
+
+Exact file hashes and download URLs are recorded in third_party/NOTICES.md.
+
+=======================================================================
+Third-party software obtained by the build system
+=======================================================================
+
+spdlog
+  Copyright (c) 2016 Gabi Melman
+  Licence: MIT
+  Source:  https://github.com/gabime/spdlog
+
+nlohmann/json (JSON for Modern C++)
+  Copyright (c) 2013-2025 Niels Lohmann
+  Licence: MIT
+  Source:  https://github.com/nlohmann/json
+
+GoogleTest
+  Copyright 2008 Google Inc.
+  Licence: BSD-3-Clause
+  Source:  https://github.com/google/googletest
+  Used for the test suite only; not part of any release.
+
+=======================================================================
+Separate programs distributed alongside official releases
+=======================================================================
+
+QEMU
+  Copyright (c) 2003-2025 Fabrice Bellard and the QEMU Project developers
+  Licence: GNU General Public License, version 2 (GPLv2)
+  Source:  https://www.qemu.org/
+  QEMU is shipped as a separate, unmodified program with its own COPYING
+  file and a pointer to the corresponding source. WatchlistBox controls it
+  over QMP and the D-Bus display interface; no QEMU code is linked into
+  the WatchlistBox executables.
+
+Android SDK Platform-Tools (adb)
+  Copyright The Android Open Source Project
+  Licence: Apache License, Version 2.0, with the component notices shipped
+           inside the platform-tools package
+  Source:  https://developer.android.com/tools/releases/platform-tools
+
+=======================================================================
+Libraries distributed with official releases
+=======================================================================
+
+Qt 6
+  Copyright The Qt Company Ltd. and other contributors
+  Licence: GNU Lesser General Public License, version 3 (LGPLv3)
+  Source:  https://download.qt.io/archive/qt/
+  The Qt DLLs are shipped unmodified and dynamically linked, and can be
+  replaced with compatible builds.
+
+Microsoft Visual C++ runtime
+  Copyright Microsoft Corporation
+  Shipped app-locally under the Visual Studio redistribution terms.
+
+The libraries QEMU loads (from the MSYS2 UCRT64 package set), each with its
+version, licence and licence text, are listed in THIRD-PARTY-NOTICES.txt
+and licenses\ in the installed program folder.
+
+=======================================================================
+Third-party data: DNS filter lists
+=======================================================================
+
+The DNS filter uses the following lists. They are data, not code, and each
+remains under its own licence. A compiled wlbl database derived from a list
+is a derivative of that list and carries its licence; it is not part of the
+Apache-2.0 program.
+
+Bundled with official releases (offline snapshot for first boot):
+
+  AdGuard DNS filter
+    Copyright (c) AdGuard Software Ltd
+    Licence: GNU General Public License, version 3 (GPLv3)
+    Source:  https://github.com/AdguardTeam/AdGuardSDNSFilter
+
+Fetched by the application at runtime, never bundled:
+
+  EasyList and EasyPrivacy
+    Copyright (c) The EasyList authors
+    Licence: CC BY-SA 3.0 or GPLv3, at the recipient's option
+    Source:  https://easylist.to/
+
+  oisd
+    Copyright (c) Stephan van Ruth
+    Licence: GNU General Public License, version 3 (GPLv3)
+    Source:  https://oisd.nl
+
+  HaGeZi DNS Blocklists
+    Copyright (c) HaGeZi
+    Licence: GNU General Public License, version 3 (GPLv3)
+    Source:  https://github.com/hagezi/dns-blocklists
+
+  StevenBlack unified hosts
+    Copyright (c) Steven Black and the upstream list authors
+    Licence: MIT for the compilation; the upstream sections it embeds
+             remain under their own terms, some of which are
+             non-commercial, which is why this list is fetched at runtime
+             only and never redistributed by this project
+    Source:  https://github.com/StevenBlack/hosts
+
+=======================================================================
+Fonts
+=======================================================================
+
+Inter
+  Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
+  Licence: SIL Open Font License, Version 1.1
+  The WatchlistBox wordmark uses letterforms from Inter SemiBold converted
+  to outlines (brand/svg/watchlistbox-wordmark.svg). No font file is
+  distributed with this project.

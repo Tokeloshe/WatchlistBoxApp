@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WatchlistBox brand asset. Copyright (c) 2026 James Honiball. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <title>WatchlistBox</title>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M16 48 A32 32 0 0 1 48 16 L164.47 16 A24 24 0 0 1 183.21 25.01 L232 86 A16 16 0 0 1 232 106 L183.21 166.99 A24 24 0 0 1 164.47 176 L48 176 A32 32 0 0 1 16 144 L16 48 Z M88 48 L88 144 L176 96 Z"/>
+  <rect x="48" y="192" width="152" height="32" rx="12" fill="#FFFFFF"/>
+</svg>

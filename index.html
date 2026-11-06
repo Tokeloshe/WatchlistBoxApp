@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WatchlistBox</title>
+<meta name="description" content="WatchlistBox turns a Windows PC or an Apple Silicon Mac into a dedicated set-top box for Watchlist Pro. One download, boots straight into the app, plays films full screen.">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/mark-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/mark-256.png">
+<link rel="apple-touch-icon" href="assets/mark-256.png">
+<meta property="og:title" content="WatchlistBox">
+<meta property="og:description" content="A dedicated set-top box for Watchlist Pro, on the computer you already have.">
+<meta property="og:image" content="https://tokeloshe.github.io/WatchlistBoxApp/assets/mark-1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0E1116;
+    --surface: #161A21;
+    --raised: #1F242D;
+    --line: #2A3039;
+    --text: #F3F5F8;
+    --muted: #A9B1BD;
+    --amber: #FFB020;
+    --amber-hover: #FFC247;
+    --amber-deep: #E08A0B;
+    --on-amber: #1A1304;
+    --focus: #FFD27A;
+    --glow: rgba(255, 176, 32, 0.22);
+    --screen: #07090C;
+  }
+  :root[data-theme="light"] {
+    --bg: #F2F4F7;
+    --surface: #FFFFFF;
+    --raised: #E8EBF0;
+    --line: #D3D8E0;
+    --text: #14181F;
+    --muted: #5B6573;
+    --amber: #E08A0B;
+    --amber-hover: #C77A08;
+    --amber-deep: #B36D06;
+    --on-amber: #1A1304;
+    --focus: #B36D06;
+    --glow: rgba(224, 138, 11, 0.18);
+    --screen: #0E1116;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #F2F4F7;
+      --surface: #FFFFFF;
+      --raised: #E8EBF0;
+      --line: #D3D8E0;
+      --text: #14181F;
+      --muted: #5B6573;
+      --amber: #E08A0B;
+      --amber-hover: #C77A08;
+      --amber-deep: #B36D06;
+      --on-amber: #1A1304;
+      --focus: #B36D06;
+      --glow: rgba(224, 138, 11, 0.18);
+      --screen: #0E1116;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--amber); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--amber-hover); }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+  h1, h2, h3 { margin: 0; line-height: 1.15; letter-spacing: -0.015em; }
+  h2 { font-size: 1.75rem; font-weight: 600; }
+  h3 { font-size: 1.25rem; font-weight: 600; }
+  p { margin: 0 0 1rem; max-width: 66ch; }
+  ol, ul { margin: 0 0 1rem; padding-left: 1.4rem; max-width: 66ch; }
+  li { margin-bottom: 0.45rem; }
+  code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; background: var(--raised); padding: 0.1em 0.35em; border-radius: 4px; }
+  pre { background: var(--raised); padding: 0.9rem 1rem; border-radius: 8px; overflow-x: auto; max-width: 100%; font-size: 0.85rem; line-height: 1.5; }
+  pre code { background: none; padding: 0; }
+
+  .wrap { width: min(100% - 32px, 980px); margin: 0 auto; }
+
+  /* Header */
+  header { padding: 20px 0; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; font-weight: 600; }
+  .brand img { width: 32px; height: 32px; }
+  nav { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+  nav a:hover { color: var(--text); }
+  .theme { background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 0.85rem; cursor: pointer; }
+  .theme:hover { color: var(--text); border-color: var(--muted); }
+
+  /* Hero: the television */
+  .hero { padding: 36px 0 56px; }
+  .tv {
+    position: relative;
+    background: var(--screen);
+    border-radius: 18px;
+    padding: clamp(28px, 6vw, 72px) clamp(20px, 6vw, 72px) clamp(40px, 6vw, 64px);
+    box-shadow: 0 0 0 1px var(--line), 0 40px 120px -40px var(--glow);
+    color: #F3F5F8;
+    overflow: hidden;
+  }
+  .tv::after {
+    /* the standby light: it blinks once while the page comes up, then stays on */
+    content: "";
+    position: absolute;
+    right: 28px;
+    bottom: 22px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 14px 2px rgba(255, 176, 32, 0.8);
+    animation: standby 1.6s ease-out 1 both;
+  }
+  @keyframes standby {
+    0% { opacity: 0.15; box-shadow: none; }
+    35% { opacity: 1; }
+    55% { opacity: 0.25; box-shadow: none; }
+    100% { opacity: 1; box-shadow: 0 0 14px 2px rgba(255, 176, 32, 0.8); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tv::after { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+  .tv .mark { width: clamp(64px, 10vw, 96px); height: auto; margin-bottom: 28px; display: block; }
+  .tv h1 { font-size: clamp(2.2rem, 6vw, 4.25rem); font-weight: 700; letter-spacing: -0.03em; max-width: 14ch; }
+  .tv .lead { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: #C9D0DA; max-width: 46ch; margin: 20px 0 0; line-height: 1.5; }
+  .tv .tagline { margin: 28px 0 0; color: #A9B1BD; font-size: 0.95rem; }
+  .tv .tagline em { font-style: italic; }
+
+  /* Download choice */
+  .choose { padding: 8px 0 48px; }
+  .choose h2 { margin-bottom: 6px; }
+  .choose > .wrap > p { color: var(--muted); margin-bottom: 28px; }
+  .platforms { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 720px) { .platforms { grid-template-columns: 1fr; } }
+  .platform { border-top: 3px solid var(--amber); padding-top: 18px; }
+  .platform h3 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; }
+  .platform .fits { color: var(--muted); margin: 4px 0 18px; font-size: 0.95rem; }
+  .btn {
+    display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px;
+    background: var(--amber); color: var(--on-amber); text-decoration: none;
+    padding: 14px 20px; border-radius: 10px; font-weight: 600; line-height: 1.25;
+    transition: background 120ms ease;
+  }
+  .btn:hover { background: var(--amber-hover); color: var(--on-amber); }
+  .btn:active { background: var(--amber-deep); }
+  .btn small { font-weight: 500; font-size: 0.85rem; opacity: 0.8; }
+  .btn.second { background: var(--raised); color: var(--text); margin-top: 10px; }
+  .btn.second:hover { background: var(--line); }
+  .count { display: block; margin-top: 10px; color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+  .count b { color: var(--text); font-weight: 600; }
+  .alt { color: var(--muted); font-size: 0.92rem; margin-top: 14px; }
+  .total { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; font-variant-numeric: tabular-nums; }
+  .total b { color: var(--text); }
+
+  /* Steps */
+  .steps { padding: 24px 0 48px; }
+  .steps h2 { margin-bottom: 24px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 720px) { .two { grid-template-columns: 1fr; gap: 24px; } }
+  .steps ol li { margin-bottom: 0.7rem; }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; color: var(--muted); }
+  summary:hover { color: var(--text); }
+
+  /* Plain sections */
+  section.plain { padding: 24px 0 40px; border-top: 1px solid var(--line); }
+  section.plain h2 { margin-bottom: 16px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr; gap: 8px; } }
+
+  /* Coffee */
+  .coffee { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .coffee img { height: 56px; width: auto; display: block; }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: 0.9rem; }
+  footer p { max-width: none; margin-bottom: 0.5rem; }
+  footer a { color: var(--muted); }
+  footer a:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/watchlistbox-mark.svg" alt="">WatchlistBox</a>
+    <nav aria-label="Page">
+      <a href="#download">Download</a>
+      <a href="#steps">Set up</a>
+      <a href="#about">What it does</a>
+      <a href="#support">Support</a>
+      <a href="https://github.com/Tokeloshe/WatchlistBoxApp">GitHub</a>
+      <button class="theme" type="button" id="theme" aria-label="Switch between dark and light">Light</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="tv">
+        <img class="mark" src="assets/watchlistbox-mark.svg" alt="">
+        <h1>A set-top box for Watchlist Pro, on the computer you already have.</h1>
+        <p class="lead">One download. It boots its own TV system, opens Watchlist Pro and plays your films full screen, with a keyboard, a game controller or a mouse. Windows and Apple Silicon Macs.</p>
+        <p class="tagline"><em>A Honiball brothers app.</em> For my brother, George Thomas Honiball, whose deep appreciation of film and television inspired this project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="choose" id="download">
+    <div class="wrap">
+      <h2>Download</h2>
+      <p>Free. Both carry the complete TV system; the Watchlist Pro app downloads by itself on the first start.</p>
+      <div class="platforms">
+        <div class="platform">
+          <h3>Windows</h3>
+          <p class="fits">Windows 10 or 11, 64-bit</p>
+          <a class="btn" href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe">Download the installer<small>WatchlistBox-Setup-x64.exe, 1.07 GB</small></a>
+          <a class="btn second" href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Portable-x64.zip">Portable zip instead<small>WatchlistBox-Portable-x64.zip, 1.10 GB</small></a>
+          <span class="count"><b data-count="windows">—</b> Windows downloads</span>
+        </div>
+        <div class="platform">
+          <h3>Mac</h3>
+          <p class="fits">Apple Silicon (M1 or later), macOS 26</p>
+          <a class="btn" href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg">Download the app<small>WatchlistBox-0.1.0-macOS-arm64.dmg, 55 MB</small></a>
+          <a class="btn second" href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar">Download the TV system<small>WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar, 929 MB</small></a>
+          <span class="count"><b data-count="mac">—</b> Mac downloads</span>
+          <p class="alt">Both are needed. A <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.zip">plain zip of the app</a> (49 MB) is there for anyone who would rather not use a disk image.</p>
+        </div>
+      </div>
+      <p class="total"><b data-count="all">—</b> downloads in all, counted by GitHub. Checksums for every file are in <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/SHA256SUMS.txt">SHA256SUMS.txt</a> on the <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/tag/v0.1.0">release page</a>.</p>
+    </div>
+  </section>
+
+  <section class="steps" id="steps">
+    <div class="wrap">
+      <h2>Set up</h2>
+      <div class="two">
+        <div>
+          <h3>Windows</h3>
+          <ol>
+            <li>Open the downloaded file and press Install. It installs for you alone, without administrator rights and without a restart, then offers to launch WatchlistBox.</li>
+            <li>On the first start WatchlistBox checks the PC. If the Windows Hypervisor Platform is not on yet, it asks Windows once for permission to turn it on; Windows then needs one restart. Start WatchlistBox again afterwards.</li>
+            <li>The first time the firewall rule for the player is missing, WatchlistBox asks Windows for permission once more. Press Yes; films cannot play without it.</li>
+            <li>WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own Watchlist Pro account (it allows two devices) and watch.</li>
+          </ol>
+          <details>
+            <summary>The portable zip</summary>
+            <p>Unzip the <code>WatchlistBox</code> folder anywhere writable, a USB drive included, and run <code>WatchlistBox.exe</code>. It keeps everything in <code>WatchlistBox\data</code>.</p>
+          </details>
+        </div>
+        <div>
+          <h3>Mac</h3>
+          <ol>
+            <li>Open the <code>.dmg</code> and drag WatchlistBox into Applications. Open it from there, not from Downloads.</li>
+            <li>Double-click the downloaded <code>.tar</code>. It unpacks to a folder named <code>wlb-tv-16.0-20261104-r2</code>.</li>
+            <li>In Finder choose Go, then Go to Folder, enter <code>~/Library/Application Support/WatchlistBox/images</code> (create the <code>WatchlistBox</code> and <code>images</code> folders if they are not there), and move the <code>wlb-tv-16.0-20261104-r2</code> folder into it.</li>
+            <li>Double-click WatchlistBox in Applications. macOS says "WatchlistBox" Not Opened. Press Done, not Move to Trash. Then open System Settings, Privacy &amp; Security, scroll to Security, press Open Anyway next to "WatchlistBox" was blocked, enter your password and press Open. That is once.</li>
+            <li>WatchlistBox downloads the current Watchlist Pro app and opens it. Sign in with your own Watchlist Pro account (it allows two devices) and watch.</li>
+          </ol>
+          <details>
+            <summary>The same from Terminal</summary>
+<pre><code>mkdir -p "$HOME/Library/Application Support/WatchlistBox/images"
+tar -xf ~/Downloads/WatchlistBox-0.1.0-macOS-arm64-image-wlb-tv-16.0-20261104-r2.tar -C "$HOME/Library/Application Support/WatchlistBox/images"
+xattr -dr com.apple.quarantine /Applications/WatchlistBox.app</code></pre>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plain" id="about">
+    <div class="wrap">
+      <h2>What it does</h2>
+      <div class="cols">
+        <ul>
+          <li>Boots its own Android 16 TV system in a virtual machine and opens Watchlist Pro on it, with no Android desktop, launcher or setup wizard in between. When the app closes, the box opens it again.</li>
+          <li>Shows the picture full screen, the way a box behind the television would, on the monitor or TV you choose.</li>
+          <li>Takes a keyboard, a mouse (a click is a tap, the right button is Back, the wheel scrolls) and a game controller.</li>
+        </ul>
+        <ul>
+          <li>Blocks trackers and advertising for the TV system at the DNS layer, with a bundled list that works offline and daily updates from the public lists.</li>
+          <li>Keeps everything of yours in your own user folder and sends no usage data anywhere. Uninstalling asks whether to remove your data.</li>
+          <li>Runs one app only. It is not a general-purpose Android emulator.</li>
+        </ul>
+      </div>
+      <p>Needs: on Windows, a CPU with virtualisation extensions and a few gigabytes of free disk space; on a Mac, an Apple Silicon chip and macOS 26 or later (this build was made with Homebrew's Qt, which ties it to the macOS it was built on; a build for older versions is planned). Trouble? The <a href="https://github.com/Tokeloshe/WatchlistBoxApp#troubleshooting">troubleshooting notes</a> cover the usual cases, and an <a href="https://github.com/Tokeloshe/WatchlistBoxApp/issues">issue</a> with the diagnostics zip from the error card reaches the developer.</p>
+    </div>
+  </section>
+
+  <section class="plain" id="support">
+    <div class="wrap">
+      <h2>Support the project</h2>
+      <p>WatchlistBox is free, built by one developer in the evenings. If it has given your television a better box, a coffee keeps the lights on.</p>
+      <div class="coffee">
+        <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee"></a>
+        <p style="margin:0">Other ways, including XRP and the ones that cost nothing, are in <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/DONATE.md">DONATE.md</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Copyright 2026 James Honiball. Source-available with an open-source core: most of the program is under the <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/LICENSE">Apache License 2.0</a>, four components under the <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/LICENSE-COMMERCIAL.md">WatchlistBox Commercial Licence</a>; QEMU ships beside it as a separate GPL program and the TV system under its own licences, with the complete source offered in <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/SOURCE-OFFER.md">SOURCE-OFFER.md</a>.</p>
+    <p>Watchlist Pro is a third-party service and application; WatchlistBox is not affiliated with it. <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/SECURITY.md">Security</a> · <a href="https://github.com/Tokeloshe/WatchlistBoxApp/blob/main/CHANGELOG.md">Changelog</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Theme: follows the system until the button is pressed; the choice is kept in this browser.
+  var root = document.documentElement, button = document.getElementById("theme");
+  var saved = null;
+  try { saved = localStorage.getItem("wlb-theme"); } catch (e) {}
+  function current() {
+    var set = root.getAttribute("data-theme");
+    if (set) return set;
+    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  }
+  function label() { button.textContent = current() === "dark" ? "Light" : "Dark"; }
+  if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+  label();
+  button.addEventListener("click", function () {
+    var next = current() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("wlb-theme", next); } catch (e) {}
+    label();
+  });
+
+  // Download counts: every release, every asset, summed by platform.
+  function kind(name) {
+    if (/\.exe$/i.test(name) || /^WatchlistBox-Portable-.*\.zip$/i.test(name)) return "windows";
+    if (/-macOS-arm64\.(dmg|zip)$/i.test(name)) return "mac";
+    return "other";
+  }
+  function show(id, value) {
+    var el = document.querySelector('[data-count="' + id + '"]');
+    if (el) el.textContent = value;
+  }
+  fetch("https://api.github.com/repos/Tokeloshe/WatchlistBoxApp/releases", { headers: { Accept: "application/vnd.github+json" } })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (releases) {
+      var sums = { windows: 0, mac: 0, all: 0 };
+      releases.forEach(function (rel) {
+        (rel.assets || []).forEach(function (a) {
+          var n = a.download_count || 0;
+          sums.all += n;
+          var k = kind(a.name);
+          if (k in sums) sums[k] += n;
+        });
+      });
+      var fmt = function (n) { return n.toLocaleString("en"); };
+      show("windows", fmt(sums.windows));
+      show("mac", fmt(sums.mac));
+      show("all", fmt(sums.all));
+    })
+    .catch(function () { /* the dashes stay */ });
+})();
+</script>
+</body>
+</html>
