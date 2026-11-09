@@ -14,6 +14,7 @@
   <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-Setup-x64.exe"><img src="https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/windows.svg" alt="Windows downloads"></a>
   <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases/download/v0.1.0/WatchlistBox-0.1.0-macOS-arm64.dmg"><img src="https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/mac.svg" alt="Mac downloads"></a>
   <a href="https://github.com/Tokeloshe/WatchlistBoxApp/releases"><img src="https://raw.githubusercontent.com/Tokeloshe/WatchlistBoxApp/counters/all.svg" alt="All downloads"></a>
+  <a href="https://github.com/sponsors/Tokeloshe"><img src="https://img.shields.io/badge/sponsor-GitHub-EA4AAA?logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub"></a>
   <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-%245-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy me a coffee"></a>
 </p>
 
@@ -134,6 +135,8 @@ xattr -dr com.apple.quarantine /Applications/WatchlistBox.app
   <b>Playing your first film?</b><br>
   If WatchlistBox has earned the spot under your television, a coffee ($5) is the nicest way to say so.<br><br>
   <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy me a coffee" height="48"></a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/sponsors/Tokeloshe"><img src="https://img.shields.io/badge/Sponsor%20on%20GitHub-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub" height="48"></a>
   <br><br>
 </p>
 
@@ -211,7 +214,9 @@ it:
 <br>
 <a href="https://buymeacoffee.com/Tokeloshe"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60"></a>
 <br><br>
-<sub>About a minute. Any card, no account needed.</sub>
+<a href="https://github.com/sponsors/Tokeloshe"><img src="https://img.shields.io/badge/Sponsor%20on%20GitHub-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub" height="44"></a>
+<br><br>
+<sub>Coffee: about a minute, any card, no account needed.<br>Sponsor: two clicks if you are signed in to GitHub.</sub>
 <br><br>
 </td>
 <td align="center" valign="middle" width="44%">

@@ -2,9 +2,17 @@
 
 I make WatchlistBox in the evenings, and it stays free, so that one app can run on a
 television the way it deserves to. If it has earned the spot under your television, here are
-three ways to say so, from easiest to free.
+four ways to say so, from easiest to free.
 
-## 1. Buy Me a Coffee (easiest)
+## 1. GitHub Sponsors (two clicks)
+
+Already signed in to GitHub? Sponsor once or monthly with the card GitHub has on file.
+
+<p align="center">
+  <a href="https://github.com/sponsors/Tokeloshe"><img src="https://img.shields.io/badge/Sponsor%20on%20GitHub-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor on GitHub" height="44"></a>
+</p>
+
+## 2. Buy Me a Coffee (any card)
 
 A coffee is $5. About a minute: any card, no account needed.
 
@@ -32,7 +40,7 @@ Every coffee goes straight back into the project:
 - **The evenings** that keep it working when Watchlist Pro changes, and that turn your bug
   reports into fixes.
 
-## 2. Donate via XRP (Ripple)
+## 3. Donate via XRP (Ripple)
 
 **Payment Address:**
 ```
@@ -60,7 +68,7 @@ rf82s1CDagppvM6ATqc1nSrL6GackzHJrm
 If your wallet asks for a "Destination Tag" instead of "Memo", enter the same number:
 `2621443948`. They are the same thing.
 
-## 3. Support without spending a cent
+## 4. Support without spending a cent
 
 These matter more than you'd think:
 
